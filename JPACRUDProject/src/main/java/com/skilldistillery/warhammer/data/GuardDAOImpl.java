@@ -32,4 +32,43 @@ public class GuardDAOImpl implements GuardDAO {
 		return guardsman;
 	}
 
+	@Override
+	public ImperialGuard create(ImperialGuard newGuard) {
+		System.out.println(newGuard.getId());
+		em.persist(newGuard);
+		
+		System.out.println(newGuard.getId());
+		em.flush();
+		System.out.println(newGuard.getId());
+		
+		return newGuard;
+	}
+	@Override
+	public ImperialGuard update(int id, ImperialGuard guardsman) {
+		ImperialGuard managed = em.find(ImperialGuard.class, id);
+		managed.setArmourSave(guardsman.getArmourSave());
+		managed.setAttacks(guardsman.getAttacks());
+		managed.setBallisticSkill(guardsman.getBallisticSkill());
+		managed.setLeadership(guardsman.getLeadership());
+		managed.setMovement(guardsman.getMovement());
+		managed.setSpecialCharacter(guardsman.getSpecialCharacter());
+		managed.setStrength(guardsman.getStrength());
+		managed.setToughness(guardsman.getToughness());
+		managed.setUnitName(guardsman.getUnitName());
+		managed.setUnitSize(guardsman.getUnitSize());
+		managed.setUnitType(guardsman.getUnitType());
+		managed.setWeaponSkill(guardsman.getWeaponSkill());
+		managed.setWounds(guardsman.getWounds());
+		
+		
+		return managed;
+	}
+	
+	@Override
+	public void delete(int id) {
+		ImperialGuard delete = em.find(ImperialGuard.class, id);
+		em.remove(delete);
+		
+	}
+
 }

@@ -14,10 +14,21 @@
 <title>All Guard Codex Units</title>
 </head>
 <body>
+<a href="index.do">Home</a>
+<br>
 <c:forEach items = "${guardArmy }" var = "unit">
-	
+	<h2>${unit.unitName}</h2>
+	<h4>Unit ID: ${unit.id}</h4>
 		<p>${unit}</p>
-
+<form action="updateUnitView.do" method="GET">
+		<input type="hidden" name="id" value="${unit.id}" /> <input type="submit"
+			value="Update Unit" /><br />
+	</form>
+<form action="deleteUnit.do" method="GET">
+		<input type="hidden" name="id" value="${unit.id}" /> <input type="submit"
+			value="Delete Unit" /><br />
+	</form>
 </c:forEach>
+
 </body>
 </html>

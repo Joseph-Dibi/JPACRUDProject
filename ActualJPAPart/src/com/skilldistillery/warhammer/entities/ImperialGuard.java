@@ -2,6 +2,8 @@ package com.skilldistillery.warhammer.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,6 +19,7 @@ public class ImperialGuard {
 	@Column(name = "unit_name")
 	private String unitName;
 	@Column(name = "unit_type")
+	@Enumerated(EnumType.STRING)
 	private ForceOrg unitType;
 	private int wounds;
 	private int attacks;
@@ -31,6 +34,7 @@ public class ImperialGuard {
 	private int strength;
 	private int toughness;
 	@Column(name = "special_character")
+	@Enumerated(EnumType.STRING)
 	private SpecialCharacter specialCharacter;
 	@Column(name = "unit_size")
 	private int unitSize;
@@ -177,13 +181,10 @@ public class ImperialGuard {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Unit id: ");
-		builder.append(id);
-		builder.append(". Unit Name: ");
-		builder.append(unitName);
-		builder.append(". Unit Type: ");
+		
+		builder.append("Unit Type: ");
 		builder.append(unitType);
-		builder.append("\n Movement: ");
+		builder.append(". Movement: ");
 		builder.append(movement);
 		builder.append(". Weapon Skill: ");
 		builder.append(weaponSkill);
@@ -207,6 +208,7 @@ public class ImperialGuard {
 		builder.append(specialCharacter);
 		return builder.toString();
 	}
+	
 
 	@Override
 	public int hashCode() {
