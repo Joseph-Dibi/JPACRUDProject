@@ -21,6 +21,7 @@
 <h2>${guardsman.unitName }</h2>
 <h3>${guardsman.id }</h3>
 <p>${guardsman}</p>
+<c:if test="${not empty guardsman }">
 <form action="updateUnitView.do" method="GET">
 		<input type="hidden" name="id" value="${guardsman.id}" /> <input type="submit"
 			value="Update Unit" /><br />
@@ -29,5 +30,6 @@
 		<input type="hidden" name="id" value="${guardsman.id}" /> <input type="submit"
 			value="Delete Unit" /><br />
 	</form>
+</c:if>	
 </body>
 </html>

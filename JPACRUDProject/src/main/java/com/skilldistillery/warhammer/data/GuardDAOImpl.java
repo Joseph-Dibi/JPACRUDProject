@@ -59,6 +59,7 @@ public class GuardDAOImpl implements GuardDAO {
 		managed.setUnitType(guardsman.getUnitType());
 		managed.setWeaponSkill(guardsman.getWeaponSkill());
 		managed.setWounds(guardsman.getWounds());
+		managed.setPowerLevel(guardsman.getPowerLevel());
 		
 		
 		return managed;

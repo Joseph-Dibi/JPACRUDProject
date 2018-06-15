@@ -35,6 +35,7 @@ Attacks<input type="number" name="attacks" value="${guardsman.attacks}"><br>
 Leadership<input type="number" name="leadership" value="${guardsman.leadership}"><br>
 Armour Save<input type="number" name="armourSave" value="${guardsman.armourSave}"><br>
 Unit Size<input type="number" name="unitSize" value="${guardsman.unitSize}"><br>
+Power Level<input type="number" name="powerLevel" value="${guardsman.powerLevel}"><br>
 <h3>Are you adding a Special Character?</h3>
 Yes<input type="radio" name="specialCharacter" value="Yes" <c:if test="${guardsman.specialCharacter == 'Yes' }">CHECKED</c:if>>
 No<input type="radio" name="specialCharacter" value="No" <c:if test="${guardsman.specialCharacter == 'No' }">CHECKED</c:if>>

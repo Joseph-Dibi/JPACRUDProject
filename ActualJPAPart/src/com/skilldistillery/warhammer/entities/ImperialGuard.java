@@ -204,11 +204,21 @@ public class ImperialGuard {
 		builder.append(armourSave);
 		builder.append("+. Unit Size: ");
 		builder.append(unitSize);
+		builder.append(" Power Level: ");
+		builder.append(powerLevel);
 		builder.append(". Special Character: ");
 		builder.append(specialCharacter);
 		return builder.toString();
 	}
 	
+
+	public int getPowerLevel() {
+		return powerLevel;
+	}
+
+	public void setPowerLevel(int powerLevel) {
+		this.powerLevel = powerLevel;
+	}
 
 	@Override
 	public int hashCode() {
