@@ -64,15 +64,17 @@ public class GuardController {
 		ImperialGuard guardsman = dao.update(id, newGuard);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("guardsman", guardsman);
+		mv.addObject("updated", guardsman);
+
 		mv.setViewName("WEB-INF/showOne.jsp");
 		return mv;
 	}
 	@RequestMapping(path="addingUnit.do", method = RequestMethod.POST)
-	public ModelAndView addUnit(ImperialGuard newGuard) {
-		System.out.println(newGuard.toString());
-		ImperialGuard guardsman = dao.create(newGuard);
+	public ModelAndView addUnit(ImperialGuard guardsman) {
+		System.out.println(guardsman.toString());
+		ImperialGuard addGuardsman = dao.create(guardsman);
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("guardsman", guardsman);
+		mv.addObject("guardsman", addGuardsman);
 		mv.setViewName("WEB-INF/showOne.jsp");
 		return mv;
 	}
