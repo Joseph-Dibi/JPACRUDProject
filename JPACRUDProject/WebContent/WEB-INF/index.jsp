@@ -26,6 +26,7 @@
 </c:forEach> --%>
 	<h1>Welcome to the Imperial Guard</h1>
 	<c:if test="${not empty deleted }">Unit ${deleted.unitName }, ID: ${deleted.id } was deleted. </c:if>
+	<c:if test="${not empty deleteArmyList}">Army List deleted. </c:if>
 	<form action="showAll.do" method="GET">
 		<input type="submit" value="View All Units" /><br />
 	</form>
@@ -37,6 +38,16 @@
 	<form action="addUnitView.do" method="GET">
 		<input type="submit" value="Add Unit" /><br />
 	</form>
-	
+		
+	<c:if test="${empty initialPointsValue}">
+	<p>Enter a power level max for an army list</p>
+	<form action="createArmyList.do" method="GET">
+		<input type="number" name="pointsValue" /><br />
+		<input type="submit" value="Create Army" /><br />
+	</form>
+	</c:if>
+	<c:if test="${not empty initialPointsValue}">
+	<a href="viewArmyList.do">View Army List</a>
+	</c:if>
 </body>
 </html>

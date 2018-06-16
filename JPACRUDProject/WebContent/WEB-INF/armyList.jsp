@@ -11,28 +11,31 @@
 	crossorigin="anonymous">
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>All Guard Codex Units</title>
+<title>Army List</title>
 </head>
 <body>
 <a href="index.do">Home</a>
 <br>
-<c:forEach items = "${guardArmy }" var = "unit">
+<h1><c:if test="${tooMuch > 0}">Unable to add unit. It cost ${tooMuch } points too many</c:if></h1>
+<h2>Army List for Power Level ${initialPointsValue }</h2>
+<h1><c:if test="${empty armyList}">Your Army is Empty! Add some units!</c:if></h1>
+<c:forEach items = "${armyList }" var = "unit">
 	<h2>${unit.unitName}</h2>
 	<h4>Unit ID: ${unit.id}</h4>
 		<p>${unit}</p>
-<form action="updateUnitView.do" method="GET">
-		<input type="hidden" name="id" value="${unit.id}" /> <input type="submit"
-			value="Update Unit" /><br />
-	</form>
-<form action="deleteUnit.do" method="GET">
+
+<form action="deleteUnitFromList.do" method="GET">
 		<input type="hidden" name="id" value="${unit.id}" /> <input type="submit"
 			value="Delete Unit" /><br />
 	</form>
-	<form action="addUnitToArmyList.do" method="GET">
-		<input type="hidden" name="id" value="${unit.id}" /> <input type="submit"
-			value="Add Unit to Army List" /><br />
-	</form>
 </c:forEach>
+<h3>You have ${pointsValue } points left to spend</h3>
 
+<form action="showAll.do" method="GET">
+		<input type="submit" value="View All Units" /><br />
+	</form>
+<form action="deleteArmyList.do" method="GET">
+		<input type="submit" value="Delete Army List" /><br />
+	</form>
 </body>
 </html>

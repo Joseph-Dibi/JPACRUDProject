@@ -30,6 +30,10 @@
 		<input type="hidden" name="id" value="${guardsman.id}" /> <input type="submit"
 			value="Delete Unit" /><br />
 	</form>
+	<form action="addUnitToArmyList.do" method="GET">
+		<input type="hidden" name="id" value="${guardsman.id}" /> <input type="submit"
+			value="Add Unit to Army List" /><br />
+	</form>
 </c:if>	
 </body>
 </html>

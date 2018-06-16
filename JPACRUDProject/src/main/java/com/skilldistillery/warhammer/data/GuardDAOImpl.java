@@ -72,4 +72,11 @@ public class GuardDAOImpl implements GuardDAO {
 		
 	}
 
+	@Override
+	public ImperialGuard addToArmyList(int id) {
+		List<ImperialGuard> armyList;
+		
+		return null;
+	}
+
 }

@@ -10,4 +10,5 @@ public interface GuardDAO {
 	public ImperialGuard create(ImperialGuard newGuard);
 	public ImperialGuard update(int id, ImperialGuard guardsman);
 	public void delete(int id);
+	public ImperialGuard addToArmyList(int id);
 }
