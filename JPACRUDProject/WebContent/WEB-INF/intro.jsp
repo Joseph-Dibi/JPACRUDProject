@@ -22,13 +22,10 @@
 		</div>
 		<div class="col-sm-4 header" id="resumeID">
 			<hr>
-			<h1>JOIN THE IMPERIAL GUARD</h1>
+			<h1>JOIN THE IMPERIAL GUARD TODAY</h1>
 			<form action="index.do">
-				<input type="submit" value="Sign me up!">
-			</form>
-
-			<form action="index.do">
-				<input type="submit" value="No thanks!">
+				<input type="submit" value="Sign me up!" class="recruit">
+				<input title="You join, or we conscript you. Your choice." type="button" value="No thanks!" class="no-click recruit">
 			</form>
 		</div>
 		<div class="col-sm-4 right">
@@ -38,7 +35,11 @@
 		</div>
 	</div>
 	<div class="row">
-	<img alt="Glorious Imperial Guard" src="https://spikeybits.com/wp-content/uploads/2017/01/800px-IGArtCodex.jpg">
+		<div class="col-sm-12 bottom">
+			<img alt="Glorious Imperial Guard"
+				src="https://spikeybits.com/wp-content/uploads/2017/02/guard-walpaper.jpg"
+				class="bottomPhoto">
+		</div>
 	</div>
 	</main>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

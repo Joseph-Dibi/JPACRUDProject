@@ -9,6 +9,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	crossorigin="anonymous">
+	<link rel="stylesheet" href="showall.css">
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Army List</title>
@@ -16,6 +17,7 @@
 <body>
 <a href="index.do">Home</a>
 <br>
+<main class="container">
 <h1><c:if test="${tooMuch > 0}">Unable to add unit. It cost ${tooMuch } points too many</c:if></h1>
 <h2>Army List for Power Level ${initialPointsValue }</h2>
 <h1><c:if test="${empty armyList}">Your Army is Empty! Add some units!</c:if></h1>
@@ -29,13 +31,15 @@
 			value="Delete Unit from List" /><br />
 	</form>
 </c:forEach>
+</main>
 <h3>You have ${pointsValue } points left to spend</h3>
 
 <form action="showAll.do" method="GET">
-		<input type="submit" value="View All Units" /><br />
+		<input type="submit" value="View All Units" class="viewDelete"/><br />
 	</form>
 <form action="deleteArmyList.do" method="GET">
-		<input type="submit" value="Delete Army List" /><br />
+		<input type="submit" value="Delete Army List" class="viewDelete" /><br />
 	</form>
+
 </body>
 </html>

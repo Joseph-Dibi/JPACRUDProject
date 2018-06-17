@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	color: gold;
+}
+
+h3 {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.numBox {
+	width: 60px;
+}
+
+.bottomPhoto {
+	height: 60%;
+	width: 60%;
+	align-content: center;
+}
+
+hr {
+	border-color: white;
+}

@@ -1,37 +1,19 @@
 @charset "UTF-8";
 
-input[type="radio"] {
-	margin: 0 10px 0 10px;
-}
-
 body {
 	background-color: black;
 	color: gold;
-	text-align: center;
 }
-
-.numGroup {
-	text-align: left;
-}
-
 .topHome {
-	align-content: left;
+	align-content:left;
 }
-
 h1 {
 	text-align: center;
+	
 }
-
-.inputBox {
-	padding-left: 10px;
-	width: 60px;
-	align-content: center;
-}
-
-.container {
+.container{
 	text-align: center;
 }
-
 hr {
 	border-color: white;
 }
@@ -39,7 +21,6 @@ hr {
 .bottomHome {
 	align-content: center;
 }
-
 .viewDelete {
 	display: block-inline;
 	padding: 2px 8px;

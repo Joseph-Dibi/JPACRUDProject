@@ -3,23 +3,44 @@
 .recruitmentPoster {
 	height: 320px;
 	width: 240px;
-	
 }
-* {
-  margin: 0;
-  padding: 0;
+
+.left {
+	margin: 0;
+	padding: 0;
 }
+
+.right {
+	margin-right: 0;
+}
+
+.bottom {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background-color: black;
 }
+
 h1 {
 	color: gold;
-}
-.header {
+	font-family: fr-bold.ttf, monospace;
 	text-align: center;
+	
 }
 
-form {
-	 display: inline-block; 
-        padding: 2px 8px;
+.header {
+	
+	text-align: center;
+}
+.recruit {
+	display: block-inline;
+	padding: 2px 8px;
+	font-size: 12px;
+}
+
+.bottomPhoto {
+	size: landscape;
+	
 }

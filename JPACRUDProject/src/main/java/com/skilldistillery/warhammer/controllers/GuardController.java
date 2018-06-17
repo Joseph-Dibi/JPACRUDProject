@@ -133,7 +133,7 @@ public class GuardController {
 		ImperialGuard guardsman = dao.findById(id);
 		if (pointsValue - guardsman.getPowerLevel() >= 0) {
 			armyList.add(guardsman);
-			pointsValue = pointsValue -guardsman.getPowerLevel();
+			pointsValue = pointsValue - guardsman.getPowerLevel();
 			session.setAttribute("tooMuch", 0);
 		}
 		else {

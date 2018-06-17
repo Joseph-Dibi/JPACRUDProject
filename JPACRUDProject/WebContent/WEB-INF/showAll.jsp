@@ -9,13 +9,17 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	crossorigin="anonymous">
+	<link rel="stylesheet" href="showall.css">
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>All Guard Codex Units</title>
 </head>
 <body>
-<a href="index.do">Home</a>
+<h1>Current Imperial Guard Army Roster</h1>
+<hr>
+<a href="index.do" class="topHome">Home</a>
 <br>
+<main class="container">
 <c:forEach items = "${guardArmy }" var = "unit">
 	<h2>${unit.unitName}</h2>
 	<h4>Unit ID: ${unit.id}</h4>
@@ -34,7 +38,12 @@
 			value="Add Unit to Army List" /><br />
 	</form>
 	</c:if>
+	<hr>
 </c:forEach>
+</main>
+<br>
+<br>
+<a href="index.do" class="bottomHome">Home</a>
 
 </body>
 </html>

@@ -204,7 +204,7 @@ public class ImperialGuard {
 		builder.append(armourSave);
 		builder.append("+. Unit Size: ");
 		builder.append(unitSize);
-		builder.append(" Power Level: ");
+		builder.append(" Unit Cost: ");
 		builder.append(powerLevel);
 		builder.append(". Special Character: ");
 		builder.append(specialCharacter);

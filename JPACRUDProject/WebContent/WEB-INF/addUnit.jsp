@@ -25,21 +25,23 @@ Heavy Support<input type="radio" name="unitType" value="HeavySupport">
 Flyer<input type="radio" name="unitType" value="Flyer">
 Lord of War<input type="radio" name="unitType" value="LordOfWar">
 <br>
-Movement<input type="number" name="movement" value="${guardsman.movement}"><br>
-Weapon Skill<input type="number" name="weaponSkill" value="${guardsman.weaponSkill}"><br>
-Ballistic Skill<input type="number" name="ballisticSkill" value="${guardsman.ballisticSkill}"><br>
-Strength<input type="number" name="strength" value="${guardsman.strength}"><br>
-Toughness<input type="number" name="toughness" value="${guardsman.toughness}"><br>
-Wounds<input type="number" name="wounds" value="${guardsman.wounds}"><br>
-Attacks<input type="number" name="attacks" value="${guardsman.attacks}"><br>
-Leadership<input type="number" name="leadership" value="${guardsman.leadership}"><br>
-Armour Save<input type="number" name="armourSave" value="${guardsman.armourSave}"><br>
-Unit Size<input type="number" name="unitSize" value="${guardsman.unitSize}"><br>
-Power Level<input type="number" name="powerLevel" value="${guardsman.powerLevel}"><br>
 <h3>Are you adding a Special Character?</h3>
 Yes<input type="radio" name="specialCharacter" value="Yes">
 	No<input type="radio" name="specialCharacter" value="No">
 <br>
+<div class="numGroup">
+Movement		<input type="number" name="movement" value="${guardsman.movement}" class = "inputBox"><br>
+Weapon Skill		<input type="number" name="weaponSkill" value="${guardsman.weaponSkill}" class = "inputBox"><br>
+Ballistic Skill		<input type="number" name="ballisticSkill" value="${guardsman.ballisticSkill}" class = "inputBox"><br>
+Strength		<input type="number" name="strength" value="${guardsman.strength}" class = "inputBox"><br>
+Toughness		<input type="number" name="toughness" value="${guardsman.toughness}" class = "inputBox"><br>
+Wounds		<input type="number" name="wounds" value="${guardsman.wounds}" class = "inputBox"><br>
+Attacks		<input type="number" name="attacks" value="${guardsman.attacks}" class = "inputBox"><br>
+Leadership		<input type="number" name="leadership" value="${guardsman.leadership}" class = "inputBox"><br>
+Armour Save		<input type="number" name="armourSave" value="${guardsman.armourSave}" class = "inputBox"><br>
+Unit Size		<input type="number" name="unitSize" value="${guardsman.unitSize}" class = "inputBox"><br>
+Unit Cost		<input type="number" name="powerLevel" value="${guardsman.powerLevel}" class = "inputBox"><br>
+</div>
 	<input type="hidden" name="guardsman" value="${guardsman}"/>
 	<input type="submit" value="Add Unit"/>
 	</form>
