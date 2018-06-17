@@ -49,5 +49,7 @@
 	<c:if test="${not empty initialPointsValue}">
 	<a href="viewArmyList.do">View Army List</a>
 	</c:if>
+	
+	
 </body>
 </html>

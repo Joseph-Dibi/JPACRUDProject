@@ -10,6 +10,8 @@
 	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	crossorigin="anonymous">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="addUpdate.css">
+
 <title>AddUnit</title>
 </head>
 <body>
@@ -43,6 +45,9 @@ No<input type="radio" name="specialCharacter" value="No" <c:if test="${guardsman
 	<input type="hidden" name="guardsman" value="${guardsman}"/>
 	<input type="hidden" name="id" value="${guardsman.id}"/>
 	<input type="submit" value="Update Unit"/>
+	</form>
+		<form action="showAll.do" method="GET">
+		<input type="submit" value="Back" /><br />
 	</form>
 	<a href="index.do">Home</a>
 </body>

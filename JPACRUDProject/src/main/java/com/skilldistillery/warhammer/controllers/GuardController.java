@@ -22,12 +22,19 @@ public class GuardController {
 	@Autowired
 	GuardDAO dao;
 	
+	@RequestMapping(path="intro.do", method = RequestMethod.GET)
+	public ModelAndView displayIntroPage() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("WEB-INF/intro.jsp");
+
+		return mv;
+	}
 	@RequestMapping(path="index.do", method = RequestMethod.GET)
 	public ModelAndView displayIndex(HttpSession session) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("WEB-INF/index.jsp");
 		session.setAttribute("deleteArmyList", null);
-
+		
 		return mv;
 	}
 	

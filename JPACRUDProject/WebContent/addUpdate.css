@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+body {
+	color: red;
+	background-color: black;
+}
+input[type="radio"]{
+  margin: 0 10px 0 10px;
+}

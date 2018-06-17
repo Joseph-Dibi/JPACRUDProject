@@ -28,10 +28,12 @@
 		<input type="hidden" name="id" value="${unit.id}" /> <input type="submit"
 			value="Delete Unit" /><br />
 	</form>
+	<c:if test="${not empty initialPointsValue}">
 	<form action="addUnitToArmyList.do" method="GET">
 		<input type="hidden" name="id" value="${unit.id}" /> <input type="submit"
 			value="Add Unit to Army List" /><br />
 	</form>
+	</c:if>
 </c:forEach>
 
 </body>

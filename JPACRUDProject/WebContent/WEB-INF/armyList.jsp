@@ -26,7 +26,7 @@
 
 <form action="deleteUnitFromList.do" method="GET">
 		<input type="hidden" name="id" value="${unit.id}" /> <input type="submit"
-			value="Delete Unit" /><br />
+			value="Delete Unit from List" /><br />
 	</form>
 </c:forEach>
 <h3>You have ${pointsValue } points left to spend</h3>
