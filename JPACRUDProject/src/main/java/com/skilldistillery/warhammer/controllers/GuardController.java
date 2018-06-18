@@ -32,8 +32,8 @@ public class GuardController {
 	@RequestMapping(path="index.do", method = RequestMethod.GET)
 	public ModelAndView displayIndex(HttpSession session) {
 		ModelAndView mv = new ModelAndView();
+		session.setAttribute("deleteArmyList", 2);
 		mv.setViewName("WEB-INF/index.jsp");
-		session.setAttribute("deleteArmyList", null);
 		
 		return mv;
 	}
@@ -141,7 +141,7 @@ public class GuardController {
 		}
 		session.setAttribute("pointsValue", pointsValue);
 		session.setAttribute("armyList", armyList);
-		mv.setViewName("WEB-INF/armyList.jsp");
+		mv.setViewName("redirect:viewArmyList.do");
 		return mv;
 	}
 	
