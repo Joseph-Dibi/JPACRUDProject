@@ -36,7 +36,7 @@
 		<div class="col">
 			<form action="showOne.do" method="GET">
 				<input type="submit" value="View Unit by Id" /> <input
-					type="number" name="id" class="numBox" />
+					type="number" name="id" class="numBox" required/>
 			</form>
 		</div>
 	</div>
@@ -57,7 +57,7 @@
 			<c:if test="${empty initialPointsValue}">
 				<p>Enter a Points Limit to use for an army list</p>
 				<form action="createArmyList.do" method="GET">
-					<input type="number" name="pointsValue" /><br /> <input
+					<input type="number" name="pointsValue" required/><br /> <input
 						type="submit" value="Create Army" /><br />
 				</form>
 			</c:if>

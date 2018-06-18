@@ -11,7 +11,7 @@ body {
 }
 
 .numGroup {
-	text-align: left;
+	text-align: center;
 }
 
 .topHome {
@@ -22,11 +22,7 @@ h1 {
 	text-align: center;
 }
 
-.inputBox {
-	padding-left: 10px;
-	width: 60px;
-	align-content: center;
-}
+
 
 .container {
 	text-align: center;
