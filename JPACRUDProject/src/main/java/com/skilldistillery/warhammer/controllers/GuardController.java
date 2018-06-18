@@ -141,7 +141,7 @@ public class GuardController {
 		}
 		session.setAttribute("pointsValue", pointsValue);
 		session.setAttribute("armyList", armyList);
-		mv.setViewName("redirect:viewArmyList.do");
+		mv.setViewName("WEB-INF/armyList.jsp");
 		return mv;
 	}
 	
