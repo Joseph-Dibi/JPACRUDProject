@@ -21,8 +21,9 @@
 	<div class="row">
 		<div class="col">
 			<h1>Welcome to the Imperial Guard</h1>
-			<c:if test="${not empty deleted }">Unit ${deleted.unitName }, ID: ${deleted.id } was deleted. </c:if>
-			<c:if test="${deleteArmyList != 2}">Army List deleted. </c:if>
+			<c:if test="${not empty deletedUnit }">Unit ${deletedUnit.unitName }, ID: ${deleted.id } was deleted. </c:if>
+			<%-- <c:if test="${deleteArmyList}">Army List deleted. </c:if> --%>
+			<h5>${deleteArmyList }</h5>
 			<hr>
 		</div>
 	</div>

@@ -42,31 +42,13 @@ public class ImperialGuard {
 	private int powerLevel;
 
 	public enum SpecialCharacter {
-		Yes("Yes"), No("No");
-		private String special;
-
-		SpecialCharacter(String special) {
-			this.special = special;
-		}
-
-		public String getSpecial() {
-			return special;
-		}
+		Yes, No;
 
 	}
 
 	public enum ForceOrg {
-		HQ("HQ"), Troops("Troops"), Elites("Elites"), HeavySupport("Heavy Support"), FastAttack(
-				"Fast Attack"), DedicatedTransport("Dedicated Transport"), Flyer("Flyer"), LordOfWar("Lord of War");
-		private String forceOrg;
+		HQ, Troops, Elites, HeavySupport, FastAttack, DedicatedTransport, Flyer, LordOfWar;
 
-		ForceOrg(String forceOrg) {
-			this.forceOrg = forceOrg;
-		}
-
-		public String getForceOrg() {
-			return forceOrg;
-		}
 
 	}
 

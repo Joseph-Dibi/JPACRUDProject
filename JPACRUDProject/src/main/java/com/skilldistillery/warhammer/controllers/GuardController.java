@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.skilldistillery.warhammer.data.GuardDAO;
 import com.skilldistillery.warhammer.entities.ImperialGuard;
@@ -32,7 +33,6 @@ public class GuardController {
 	@RequestMapping(path="index.do", method = RequestMethod.GET)
 	public ModelAndView displayIndex(HttpSession session) {
 		ModelAndView mv = new ModelAndView();
-		session.setAttribute("deleteArmyList", 2);
 		mv.setViewName("WEB-INF/index.jsp");
 		
 		return mv;
@@ -92,12 +92,12 @@ public class GuardController {
 		return mv;
 	}
 	@RequestMapping(path="deleteUnit.do", method = RequestMethod.GET)
-	public ModelAndView deleteUnit(int id) {
+	public ModelAndView deleteUnit(int id, HttpSession session, RedirectAttributes redirect) {
 		ImperialGuard guardsman = dao.findById(id);
 				dao.delete(id);
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("deleted", guardsman);
-		mv.setViewName("WEB-INF/index.jsp");
+		redirect.addFlashAttribute("deletedUnit", guardsman);
+		mv.setViewName("redirect:index.do");
 		return mv;
 	}
 	@RequestMapping(path="createArmyList.do", method = RequestMethod.GET)
@@ -154,14 +154,14 @@ public class GuardController {
 		return mv;
 	}
 	@RequestMapping(path="deleteArmyList.do", method = RequestMethod.GET)
-	public ModelAndView deleteArmyList(HttpSession session) {
+	public ModelAndView deleteArmyList(HttpSession session, RedirectAttributes redirect) {
 		ModelAndView mv = new ModelAndView();
 		List<ImperialGuard> armyList = (List<ImperialGuard>) session.getAttribute("armyList");
 		armyList.clear();
 		session.setAttribute("armyList", armyList);
-		session.setAttribute("deleteArmyList", 1);
+		redirect.addFlashAttribute("deleteArmyList", "Army List deleted");
 		session.setAttribute("initialPointsValue", null);
-		mv.setViewName("WEB-INF/index.jsp");
+		mv.setViewName("redirect:index.do");
 		return mv;
 	}
 	
